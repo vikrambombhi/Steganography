@@ -38,6 +38,7 @@ def func(img, string1):
 
 #Convert user input string to binary
 string = input("Input the text you would like to hide:")
+string = "*|*|*|*|*" + string + "*|*|*|*|*"
 string_in_bin = text_to_bits(string)
 string_in_bin = list(string_in_bin)
 
@@ -58,4 +59,5 @@ possible_repeat = open_bits//string_bin_length
 extended_string = string_in_bin * possible_repeat
 
 func(image, extended_string)
-Cimpl.save_as(image)
+Cimpl.save_as(image, 'newpic.png')
+print("done")
